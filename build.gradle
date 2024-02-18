@@ -18,8 +18,8 @@ apply plugin: "net.minecraftforge.gradle.forge"
 apply plugin: 'org.spongepowered.mixin'
 
 version = "1.0"
-group = "de.vepexlegit.rotationfix"
-archivesBaseName = "RotationFix"
+group = "de.vepexlegit.rotationfixdebug"
+archivesBaseName = "RotationFixDebug"
 
 sourceCompatibility = targetCompatibility = 1.8
 compileJava.options.encoding = "UTF-8"
@@ -126,19 +126,19 @@ reobf {
 
 jar {
     manifest.attributes(
-        "FMLCorePlugin" : "de.vepexlegit.rotationfix.mixin.MixinLoader",
+        "FMLCorePlugin" : "de.vepexlegit.rotationfixdebug.mixin.MixinLoader",
         "ForceLoadAsMod": true,
         "TweakOrder": 0,
         "ModSide": "CLIENT",
         'FMLCorePluginContainsFMLMod': true,
         'TweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
-        'MixinConfigs': 'mixins.rotationfix.json'
+        'MixinConfigs': 'mixins.rotationfixdebug.json'
     )
 }
 
 sourceSets {
     main {
-        ext.refMap = "mixins.rotationfix.refmap.json"
+        ext.refMap = "mixins.rotationfixdebug.refmap.json"
     }
 }
 
